@@ -1,6 +1,5 @@
 require 'sinatra/base'
-
-
+require_relative 'celebrate'
 class Birthday < Sinatra::Base
   enable :sessions
   get '/test'do
@@ -11,15 +10,14 @@ class Birthday < Sinatra::Base
   end
 
   post '/date' do
-    p params
     session[:name] = params[:name]
     session[:day] = params[:day]
     redirect '/results'
   end
   get '/results' do
     @name = session[:name]
-    @birthday = session[:day]
-    "chuj"
+    @days_to_bday = bday(session[:day])
+    erb(:results)
   end
 
 end
