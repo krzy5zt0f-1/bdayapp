@@ -1,0 +1,2 @@
+require './bdayapp'
+run Birthday
