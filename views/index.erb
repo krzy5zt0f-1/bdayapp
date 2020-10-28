@@ -10,7 +10,7 @@
     <form style="text-align:center" action="/date" method="post">
 <input type="text" name="name" required="required">
     <p style="text-align:center; font-size:3.8vw" > When were your born? </p>
-  <input type="date" name="day" required="required">
+  <input type="date" name="day" required="required" max="<%= "#{DateTime.now.strftime("%Y-%m-%d")}" %>">
   <p> <input style="text-align:center; width:250px" type="submit" value="Go!"> </p>
   </form>
   </div>

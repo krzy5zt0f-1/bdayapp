@@ -16,7 +16,7 @@ def bday(birthday_date)
   date = birthday_date.split('-').map { |x| x.to_i }
   time = DateTime.new(date[0], date[1], date[2])
   now = DateTime.now
-  if time.leap?
+  if time.month == 2 && time.day == 29
     if time.month == now.month && time.day == now.day
     0
     elsif DateTime.new(next_leap_year(now.year), date[1], date[2])> now
