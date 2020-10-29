@@ -1,23 +1,37 @@
 <% if @days_to_bday == 0 %>
-<link rel="stylesheet" href="mycss.css">
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <h1 style="text-align:center; font-size:7vw" > Happy Birthday <%= @name %>! </h1>
+    <style>
+        body { background-color: YellowGreen; }
+        h1 { font-family:'Courier New'}
+        div { font-family:'Courier New'}
+    </style>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <div style="text-align:center;padding: 250px 0; font-size:6vw" > Happy Birthday <%= @name %>! </div>
   </head>
   <div>
 <% elsif @days_to_bday == 1 %>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <h1 style="text-align:center; font-size:7vw" > Your birthday will be in <%= @days_to_bday %> day, <%= @name %>. </h1>
+    <style>
+        body { background-color: YellowGreen; }
+        h1 { font-family:'Courier New'}
+        div { font-family:'Courier New'}
+    </style>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <div style="text-align:center;padding: 250px 0; font-size:6vw" > Your birthday will be in <%= @days_to_bday %> day, <%= @name %>. </div>
   </head>
   <div>
 <% else %>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <h1 style="text-align:center; font-size:7vw" > Your birthday will be in <%= @days_to_bday %> days, <%= @name %>. </h1>
+    <style>
+        body { background-color: YellowGreen; }
+        h1 { font-family:'Courier New'}
+        div { font-family:'Courier New'}
+    </style>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <div style="text-align:center;padding: 250px 0; font-size:6vw" > Your birthday will be in <%= @days_to_bday %> days, <%= @name %>. </div>
   </head>
   <div>
 <% end %>

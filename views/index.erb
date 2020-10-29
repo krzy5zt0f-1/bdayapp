@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <style>
+        body { background-color: YellowGreen; }
+        h1 { font-family:'Courier New'}
+        p { font-family:'Courier New'}
+    </style>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
     <h1 style="text-align:center; font-size:7vw" > Hello there! </h1>
   </head>
   <div>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width">
     <p style="text-align:center; font-size:3.8vw" > What's your name? </p>
     <form style="text-align:center" action="/date" method="post">
-<input type="text" name="name" required="required">
+<input type="text" name="name" style="width:350px" required="required">
     <p style="text-align:center; font-size:3.8vw" > When were your born? </p>
   <input type="date" name="day" required="required" max="<%= "#{DateTime.now.strftime("%Y-%m-%d")}" %>">
-  <p> <input style="text-align:center; width:250px" type="submit" value="Go!"> </p>
+  <p> <input style="text-align:center; width:350px" type="submit" value="Go!"> </p>
   </form>
   </div>
 </html>
